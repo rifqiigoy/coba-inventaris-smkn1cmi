@@ -32,22 +32,24 @@
     					</tr>
   					</thead>
   					<tbody>
+              @foreach( $inventaris as $inv )
     					<tr>
       						<th scope="row">1</th>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
-      						<td>Mark</td>
+      						<td>{{ $inv->nama_brg }}</td>
+      						<td>{{ $inv->alamat }}</td>
+      						<td>{{ $inv->luas }}</td>
+      						<td>{{ $inv->thn_pengadaan }}</td>
+      						<td>{{ $inv->nilai_perolehan }}</td>
+      						<td>{{ $inv->nama_opd }}</td>
+      						<td>{{ $inv->nama_sub_opd }}</td>
+      						<td>{{ $inv->nama_sub_opd_caps }}</td>
+      						<td>{{ $inv->kab_kota }}</td>
+      						<td>{{ $inv->asal_perolehan }}</td>
+      						<td>{{ $inv->keterangan }}</td>
+      						<td>{{ $inv->kode_brg }}</td>
+      						<td>{{ $inv->jenis_barang }}</td>
     					</tr>
+              @endforeach
   					</tbody>
 				</table>
 	</div>

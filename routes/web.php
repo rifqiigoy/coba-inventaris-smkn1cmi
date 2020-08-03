@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+    // return view('index');
+// });
+// 
+// Route::get('/inventaris', function () {
+    // return view('inventaris');
+// });
 
-Route::get('/inventaris', function () {
-    return view('inventaris');
-});
+Route::get('/','PagesController@home');
+Route::get('/inventaris','InvenController@index');
