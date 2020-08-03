@@ -8,10 +8,22 @@
 			<div class="col">
 				<h1 align="center">WEB INVENTARIS SMKN 1 CIMAHI</h1>
 				<h2 align="center">Tabel Inventaris</h2>
+
 			</div>
 		</div>
 	</div>
 	<div class="container-fluid mt-2 pt-3">
+    <div class="btn-group mb-2">
+      <a href="/inventaris/kiba" class="btn btn-primary" role="button">KIB A</a>
+      <a href="/inventaris/kibb" class="btn btn-outline-primary" role="button">KIB B</a>
+      <a href="#" class="btn btn-outline-primary" role="button">KIB C</a>
+      <a href="#" class="btn btn-outline-primary" role="button">KIB D</a>
+      <a href="#" class="btn btn-outline-primary" role="button">KIB E</a>
+      <a href="#" class="btn btn-outline-primary" role="button">KIB F</a>
+    </div>
+    <div class="container-fluid mb-2">
+      <a href="/inventaris/kiba/create" class="btn btn-primary" role="button">TAMBAH DATA KIB A</a>
+    </div>
 				<table class="table shadow table-hover table-bordered table-striped">
   					<thead class="thead-dark">
     					<tr>
@@ -32,22 +44,22 @@
     					</tr>
   					</thead>
   					<tbody>
-              @foreach( $inventaris as $inv )
+              @foreach( $kiba as $inv_a )
     					<tr>
-      						<th scope="row">1</th>
-      						<td>{{ $inv->nama_brg }}</td>
-      						<td>{{ $inv->alamat }}</td>
-      						<td>{{ $inv->luas }}</td>
-      						<td>{{ $inv->thn_pengadaan }}</td>
-      						<td>{{ $inv->nilai_perolehan }}</td>
-      						<td>{{ $inv->nama_opd }}</td>
-      						<td>{{ $inv->nama_sub_opd }}</td>
-      						<td>{{ $inv->nama_sub_opd_caps }}</td>
-      						<td>{{ $inv->kab_kota }}</td>
-      						<td>{{ $inv->asal_perolehan }}</td>
-      						<td>{{ $inv->keterangan }}</td>
-      						<td>{{ $inv->kode_brg }}</td>
-      						<td>{{ $inv->jenis_barang }}</td>
+      						<th scope="row">{{ $loop->iteration }}</th>
+      						<td>{{ $inv_a->nama_brg }}</td>
+      						<td>{{ $inv_a->alamat }}</td>
+      						<td>{{ $inv_a->luas }}</td>
+      						<td>{{ $inv_a->thn_pengadaan }}</td>
+      						<td>{{ $inv_a->nilai_perolehan }}</td>
+      						<td>{{ $inv_a->nama_opd }}</td>
+      						<td>{{ $inv_a->nama_sub_opd }}</td>
+      						<td>{{ $inv_a->nama_sub_opd_caps }}</td>
+      						<td>{{ $inv_a->kab_kota }}</td>
+      						<td>{{ $inv_a->asal_perolehan }}</td>
+      						<td>{{ $inv_a->keterangan }}</td>
+      						<td>{{ $inv_a->kode_brg }}</td>
+      						<td>{{ $inv_a->jenis_barang }}</td>
     					</tr>
               @endforeach
   					</tbody>

@@ -21,5 +21,16 @@ use Illuminate\Support\Facades\Route;
     // return view('inventaris');
 // });
 
-Route::get('/','PagesController@home');
-Route::get('/inventaris','InvenController@index');
+//home
+Route::get('/','PagesController@home');//Halaman Utama
+
+//tampil
+Route::get('/inventaris/kiba','InvenController@index');//Halaman Kib A
+Route::get('/inventaris/kibb','InvenController@indexb');//Halaman Kib B
+
+//create
+Route::get('/inventaris/kiba/create','InvenController@create');//Create Kib A
+Route::get('/inventaris/kibb/create','InvenController@createb');//Create Kib B
+
+//strore
+Route::post('/inventaris/kibb/','InvenController@storeb');//Store Kib B
