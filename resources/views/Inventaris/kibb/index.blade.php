@@ -44,21 +44,27 @@
   					<tbody>
               @foreach( $kibb as $inv_b )
     					<tr>
-      						<th scope="row">{{ $loop->iteration }}</th>
-      						<td>{{ $inv_b->nama_barang }}</td>
-      						<td>{{ $inv_b->kode_brg }}</td>
+      						<th scope="row">{{ $inv_b->id }}<!--{{ $loop->iteration }}--></th>
+      						<td>{{ $inv_b->nama }}</td>
+      						<td>{{ $inv_b->kode }}</td>
       						<td>{{ $inv_b->register }}</td>
       						<td>{{ $inv_b->lokasi }}</td>
       						<td>{{ $inv_b->merk }}</td>
-      						<td>{{ $inv_b->thn_pengadaan }}</td>
-      						<td>{{ $inv_b->jumlah_brg }}</td>
+      						<td>{{ $inv_b->tahun }}</td>
+      						<td>{{ $inv_b->jumlah }}</td>
       						<td>{{ $inv_b->harga }}</td>
-      						<td>{{ $inv_b->nilai_tercatat }}</td>
+      						<td>{{ $inv_b->nilai }}</td>
       						<td>{{ $inv_b->akumulasi }}</td>
       						<td>{{ $inv_b->keterangan }}</td>
     					</tr>
               @endforeach
   					</tbody>
 				</table>
+        <br/>
+          Halaman : {{ $kibb->currentPage() }} <br/>
+          Jumlah Data : {{ $kibb->total() }} <br/>
+          Data Per Halaman : {{ $kibb->perPage() }} <br/>
+
+          {{ $kibb->links() }}
 	</div>
 @endsection

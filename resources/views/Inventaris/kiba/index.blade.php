@@ -47,22 +47,27 @@
               @foreach( $kiba as $inv_a )
     					<tr>
       						<th scope="row">{{ $loop->iteration }}</th>
-      						<td>{{ $inv_a->nama_brg }}</td>
+      						<td>{{ $inv_a->nama }}</td>
       						<td>{{ $inv_a->alamat }}</td>
       						<td>{{ $inv_a->luas }}</td>
-      						<td>{{ $inv_a->thn_pengadaan }}</td>
-      						<td>{{ $inv_a->nilai_perolehan }}</td>
-      						<td>{{ $inv_a->nama_opd }}</td>
-      						<td>{{ $inv_a->nama_sub_opd }}</td>
-      						<td>{{ $inv_a->nama_sub_opd_caps }}</td>
-      						<td>{{ $inv_a->kab_kota }}</td>
-      						<td>{{ $inv_a->asal_perolehan }}</td>
+      						<td>{{ $inv_a->tahun }}</td>
+      						<td>{{ $inv_a->nilai }}</td>
+      						<td>{{ $inv_a->opd }}</td>
+      						<td>{{ $inv_a->sub_opd }}</td>
+      						<td>{{ $inv_a->sub_opd_caps }}</td>
+      						<td>{{ $inv_a->kota }}</td>
+      						<td>{{ $inv_a->asal }}</td>
       						<td>{{ $inv_a->keterangan }}</td>
-      						<td>{{ $inv_a->kode_brg }}</td>
-      						<td>{{ $inv_a->jenis_barang }}</td>
+      						<td>{{ $inv_a->kode }}</td>
+      						<td>{{ $inv_a->jenis }}</td>
     					</tr>
               @endforeach
   					</tbody>
 				</table>
+          Halaman : {{ $kiba->currentPage() }} <br/>
+          Jumlah Data : {{ $kiba->total() }} <br/>
+          Data Per Halaman : {{ $kiba->perPage() }} <br/>
+
+          {{ $kiba->links() }}
 	</div>
 @endsection

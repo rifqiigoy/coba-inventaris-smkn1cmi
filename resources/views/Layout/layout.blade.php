@@ -23,4 +23,14 @@
   <body>
     @yield('container')
   </body>
+  <!-- Footer -->
+<footer class="page-footer font-small bg-dark mt-5">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3 text-white">
+    2020@SMKN 1 CIMAHI<br>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 </html>

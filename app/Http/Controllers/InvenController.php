@@ -24,7 +24,7 @@ class InvenController extends Controller
     //==========================================================
     public function index()
     {
-        $kiba = kiba::all();
+        $kiba = kiba::paginate(10);
         return view('inventaris.kiba.index', ['kiba' => $kiba]);
     }
     //==========================================================
@@ -32,7 +32,7 @@ class InvenController extends Controller
     //==========================================================
     public function indexb()
     {
-        $kibb = kibb::all();
+        $kibb = kibb::paginate(10);
         return view('inventaris.kibb.index', ['kibb' => $kibb]);
     }
 
@@ -90,15 +90,15 @@ class InvenController extends Controller
         //$kibb->save();
         //return redirect('/inventaris/kibb');
         kibb::create([
-        'nama_barang' => $request->nama,
-        'kode_brg' => $request->kode,
+        'nama' => $request->nama,
+        'kode' => $request->kode,
         'register' => $request->registrasi,
         'lokasi' => $request->lokasi,
         'merk' => $request->merk,
-        'thn_pengadaan' => $request->pengadaan,
-        'jumlah_brg' => $request->jumlah,
+        'tahun' => $request->pengadaan,
+        'jumlah' => $request->jumlah,
         'harga' => $request->harga,
-        'nilai_tercatat' => $request->nilai,
+        'nilai' => $request->nilai,
         'akumulasi' => $request->akumulasi,
         'keterangan' => $request->keterangan,
         ]);
