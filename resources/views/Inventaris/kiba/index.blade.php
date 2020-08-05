@@ -14,17 +14,19 @@
 	</div>
 	<div class="container-fluid mt-2 pt-3">
     <div class="btn-group mb-2">
-      <a href="/inventaris/kiba" class="btn btn-primary" role="button">KIB A</a>
+      <a href="/inventaris/kiba" class="btn btn-outline-primary active" role="button">KIB A</a>
       <a href="/inventaris/kibb" class="btn btn-outline-primary" role="button">KIB B</a>
-      <a href="#" class="btn btn-outline-primary" role="button">KIB C</a>
-      <a href="#" class="btn btn-outline-primary" role="button">KIB D</a>
-      <a href="#" class="btn btn-outline-primary" role="button">KIB E</a>
-      <a href="#" class="btn btn-outline-primary" role="button">KIB F</a>
+      <a href="/inventaris/kibc" class="btn btn-outline-primary" role="button">KIB C</a>
+      <a href="/inventaris/kibd" class="btn btn-outline-primary" role="button">KIB D</a>
+      <a href="/inventaris/kibe" class="btn btn-outline-primary" role="button">KIB E</a>
+      <a href="/inventaris/kibf" class="btn btn-outline-primary" role="button">KIB F</a>
     </div>
-    <div class="container-fluid mb-2">
-      <a href="/inventaris/kiba/create" class="btn btn-primary" role="button">TAMBAH DATA KIB A</a>
-    </div>
-				<table class="table shadow table-hover table-bordered table-striped">
+    <div class="container-fluid border rounded py-3">
+        <h3 class="text-center">KIB A<br/>Tanah</h3>
+        <div class="mb-3">
+            <a href="/inventaris/kiba/create" class="btn btn-primary" role="button">TAMBAH DATA KIB A</a>
+        </div>
+				<table class="table shadow table-hover table-bordered table-striped" style="font-size: 90%">
   					<thead class="thead-dark">
     					<tr>
       						<th scope="col"><center>No</center></th>
@@ -64,10 +66,13 @@
               @endforeach
   					</tbody>
 				</table>
+        <div class="container-fluid" style="font-size: 90%">
           Halaman : {{ $kiba->currentPage() }} <br/>
           Jumlah Data : {{ $kiba->total() }} <br/>
           Data Per Halaman : {{ $kiba->perPage() }} <br/>
 
           {{ $kiba->links() }}
+        </div>
+      </div>
 	</div>
 @endsection
