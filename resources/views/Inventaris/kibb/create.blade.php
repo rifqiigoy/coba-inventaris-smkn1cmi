@@ -11,7 +11,7 @@
           <div class="form-group w-75 mx-auto mt-3">
             <label for="nama">Nama Barang :</label>
             <input type="text" class="form-control" id="nama" placeholder="Masukan Nama Barang" name="nama">
-          </div>          
+          </div>
           <div class="form-group w-75 mx-auto">
             <label for="kode">Kode Barang Barang :</label>
             <input type="text" class="form-control" id="kode" placeholder="Masukan Kode Barang" name="kode">

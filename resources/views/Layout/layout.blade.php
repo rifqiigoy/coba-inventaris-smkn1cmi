@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@yield('title')</title>    
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/"><img width="80px" src="https://www.smkn1-cmi.sch.id/wp-content/uploads/2017/05/logo-e1494606597209.png"></a>
@@ -15,6 +15,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/inventaris/kiba">Inventaris</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ruangan"> Daftar Ruangan</a>
           </li>
         </ul>
       </div>
